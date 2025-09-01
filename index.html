@@ -7,35 +7,41 @@
     <link rel="stylesheet" href="Quotation.css">
 </head>
 <body>
-    <button class="print-btn" onclick="window.print()">Print</button>
-    <div class="container">
-        <div class="header">
-            <img src="LVX Pioneering Living Solutions.jpg" alt="LVX Logo" class="logo">
-        </div>
-        <div>
-            <p id="client-name"><!-- client name --></p>
-            <h2 id="qoutation-id">Quotation #<!-- quotation id --></h2>
-        </div>
-        <table class="info-table gray-bg">
-            <thead>
-                <tr>
-                    <th>Quotation Date</th>
-                    <th>Expiration</th>
-                    <th>Salesperson</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><!-- quotation date --></td>
-                    <td><!-- expiration date --></td>
-                    <td><!-- salesperson --></td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- quotation table --
-        <!-- total table -->
-        
-        <p>offer not include wiring or installation and programming</p>
+    <div id="loading-screen">
+        <div class="loader"></div>
     </div>
+    <main id="main-content" style="display:none;">
+        <button class="print-btn" onclick="window.print()">Print</button>
+        <div class="container">
+            <div class="header">
+                <img src="LVX Pioneering Living Solutions.jpg" alt="LVX Logo" class="logo">
+            </div>
+            <div>
+                <p id="clientName">[Client Name]</p>
+                <h2 id="qoutationId">Quotation #[Qoutation ID]</h2>
+            </div>
+            <table class="info-table gray-bg">
+                <thead>
+                    <tr>
+                        <th>Quotation Date</th>
+                        <th>Expiration</th>
+                        <th>Salesperson</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="quotationDate">[Quotation Date]</td>
+                        <td id="expirationDate">[Expiration Date]</td>
+                        <td id="salespersonName">WhatsApp Bot</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="quotationTable"></table>
+            <table id="totalTable"></table>
+    
+            <p>offer not include wiring or installation and programming</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
